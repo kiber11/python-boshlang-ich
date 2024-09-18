@@ -10,7 +10,7 @@ class avto:
         self.probeg = prob
     def update_narxi(self,narxi):
         narx=int(input("narxni kiriting:"))
-        self.narxi = narxi
+        self.narxi = narx
 
 a=avto("audi","qora",10000,100,1000)
 print(f'Nomi:{a.name}\nRangi:{a.rangi}\nNarxi: {a.narxi}\nProbegi:{a.probeg}\nTezlik:{a.tezlik}')
