@@ -13,7 +13,7 @@ class Calculator(QWidget):
 
         self.display = QLabel('0', self)
         self.display.setFont(QFont('Arial', 24))
-        self.display.setStyleSheet("background:white;")
+        self.display.setStyleSheet("background:blue;")
         self.display.setFixedHeight(60)
         
         

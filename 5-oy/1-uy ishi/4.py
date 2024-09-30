@@ -19,7 +19,7 @@ label.setGeometry(50, 80, 300, 40)
 label.setFont(font)
 label.setText("Tarjima natijasi")
 
-# Button
+
 button = QPushButton("Tarjima qilish", win)
 button.setGeometry(150, 140, 150, 50)  
 button.setFont(font)
