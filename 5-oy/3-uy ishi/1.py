@@ -21,12 +21,12 @@ class Window(QWidget):
     def fetch_data(self):
         try:
             query = self.line.text()
-            wk.set_lang("uz")  # Har safar chaqirish o'rinli
+            wk.set_lang("uz")  
             content = wk.page(query).content
             
-            if content:  # Agar ma'lumot topilsa
-                win = Window2(content, query)
-                win.show()
+            if content:  
+                wind = Window2(content, query)
+                wind.show()
             else:
                 self.show_message("Ma'lumot topilmadi.")
         except Exception as e:
@@ -57,7 +57,7 @@ class Window2(QMainWindow):
         self.layout2.addWidget(self.label2)
         self.layout2.addWidget(self.line2)
         self.setCentralWidget(central_widget)
-
+        self.show()
 app = QApplication([])
 win = Window()
 win.show()
