@@ -49,6 +49,7 @@ def kop():
     b=line2.text()
     natija.setText(f"   {int(a)*int(b)}")
 kopaytma.clicked.connect(kop)
+
 bolinma=QPushButton(win)
 bolinma.setGeometry(100,400,100,50)
 bolinma.setText("/")
@@ -62,6 +63,7 @@ def bol():
     except ZeroDivisionError as e:
         natija.setText("ZeroDivisionError")
 bolinma.clicked.connect(bol)
+
 qoldiq=QPushButton(win)
 qoldiq.setGeometry(250,400,100,50)
 qoldiq.setText("%")
@@ -72,6 +74,7 @@ def qol():
     b=line2.text()
     natija.setText(f"   {int(a)%int(b)}")
 qoldiq.clicked.connect(qol)
+
 daraja=QPushButton(win)
 daraja.setGeometry(400,400,100,50)
 daraja.setText("^")
@@ -82,5 +85,6 @@ def daraja_():
     b=line2.text()
     natija.setText(f"   {int(a)**int(b)}")
 daraja.clicked.connect(daraja_)
+
 win.show()
 app.exec_()

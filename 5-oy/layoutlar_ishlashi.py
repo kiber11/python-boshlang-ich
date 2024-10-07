@@ -27,57 +27,57 @@
 # window.show()
 # app.exec_()
 
-# from PyQt5.QtWidgets import QApplication, QWidget, QFormLayout, QLabel, QLineEdit
-
-# app = QApplication([])
-
-# # Oyna yaratamiz
-# window = QWidget()
-# window.setWindowTitle('QFormLayout misoli')
-
-# # Form layout yaratamiz
-# layout = QFormLayout()
-
-# # Yozuv va kirish maydonlarini qo'shamiz
-# layout.addRow(QLabel('Ism:'), QLineEdit())
-# layout.addRow(QLabel('Familiya:'), QLineEdit())
-# layout.addRow(QLabel('Yosh:'), QLineEdit())
-
-# # Layoutni oynaga biriktiramiz
-# window.setLayout(layout)
-
-# # Oynani ko'rsatamiz
-# window.show()
-# app.exec_()
-
-from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QVBoxLayout, QHBoxLayout
+from PyQt5.QtWidgets import QApplication, QWidget, QFormLayout, QLabel, QLineEdit
 
 app = QApplication([])
 
 # Oyna yaratamiz
 window = QWidget()
-window.setWindowTitle('Ichma-ich layoutlar')
+window.setWindowTitle('QFormLayout misoli')
 
-# Vertikal layout yaratamiz
-vbox = QVBoxLayout()
+# Form layout yaratamiz
+layout = QFormLayout()
 
-# Birinchi qatorda gorizontal layout
-hbox1 = QHBoxLayout()
-hbox1.addWidget(QPushButton('Tugma 1'))
-hbox1.addWidget(QPushButton('Tugma 2'))
+# Yozuv va kirish maydonlarini qo'shamiz
+layout.addRow(QLabel('Ism:'), QLineEdit())
+layout.addRow(QLabel('Familiya:'), QLineEdit())
+layout.addRow(QLabel('Yosh:'), QLineEdit())
 
-# Ikkinchi qatorda yana gorizontal layout
-hbox2 = QHBoxLayout()
-hbox2.addWidget(QPushButton('Tugma 3'))
-hbox2.addWidget(QPushButton('Tugma 4'))
-
-# Gorizontal layoutlarni vertikal layoutga qo'shamiz
-vbox.addLayout(hbox1)
-vbox.addLayout(hbox2)
-
-# Vertikal layoutni oynaga qo'shamiz
-window.setLayout(vbox)
+# Layoutni oynaga biriktiramiz
+window.setLayout(layout)
 
 # Oynani ko'rsatamiz
 window.show()
 app.exec_()
+
+# from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QVBoxLayout, QHBoxLayout
+
+# app = QApplication([])
+
+# # Oyna yaratamiz
+# window = QWidget()
+# window.setWindowTitle('Ichma-ich layoutlar')
+
+# # Vertikal layout yaratamiz
+# vbox = QVBoxLayout()
+
+# # Birinchi qatorda gorizontal layout
+# hbox1 = QHBoxLayout()
+# hbox1.addWidget(QPushButton('Tugma 1'))
+# hbox1.addWidget(QPushButton('Tugma 2'))
+
+# # Ikkinchi qatorda yana gorizontal layout
+# hbox2 = QHBoxLayout()
+# hbox2.addWidget(QPushButton('Tugma 3'))
+# hbox2.addWidget(QPushButton('Tugma 4'))
+
+# # Gorizontal layoutlarni vertikal layoutga qo'shamiz
+# vbox.addLayout(hbox1)
+# vbox.addLayout(hbox2)
+
+# # Vertikal layoutni oynaga qo'shamiz
+# window.setLayout(vbox)
+
+# # Oynani ko'rsatamiz
+# window.show()
+# app.exec_()

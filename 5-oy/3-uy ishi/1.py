@@ -25,8 +25,8 @@ class Window(QWidget):
             content = wk.page(query).content
             
             if content:  
-                wind = Window2(content, query)
-                wind.show()
+                self.wind = Window2(content, query)
+                self.wind.show()
             else:
                 self.show_message("Ma'lumot topilmadi.")
         except Exception as e:
@@ -57,7 +57,7 @@ class Window2(QMainWindow):
         self.layout2.addWidget(self.label2)
         self.layout2.addWidget(self.line2)
         self.setCentralWidget(central_widget)
-        self.show()
+        #self.show()
 app = QApplication([])
 win = Window()
 win.show()
