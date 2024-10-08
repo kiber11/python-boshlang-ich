@@ -1,90 +1,156 @@
-from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QGridLayout, QVBoxLayout
-
+from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QGridLayout, QVBoxLayout,QHBoxLayout,QMessageBox,QButtonGroup
+from PyQt5.QtCore import Qt
 class ShapeWindow(QWidget):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Shakllar")
         self.setFixedSize(400, 400)
+        self.layout = QVBoxLayout()
+        self.setLayout(self.layout)
+        self.UI()
+    def UI(self):   
         
        
-        self.layout = QVBoxLayout()
-
-       
         self.button1 = QPushButton("1", self)
+        #self.button1.setFixedSize(200,50)
         self.button2 = QPushButton("2", self)
         self.button3 = QPushButton("3", self)
         self.button4 = QPushButton("4", self)
-
-       
+        self.maingroup=QButtonGroup(self)
+        self.maingroup.addButton(self.button1)
+        self.maingroup.addButton(self.button2)
+        self.maingroup.addButton(self.button3)
+        self.maingroup.addButton(self.button4)
+        
+        self.orqaga=QPushButton("orqaga",self,clicked=self.func)
+        self.orqaga.setGeometry(50,330,300,50)
+        self.orqaga.hide()
         self.button1.clicked.connect(self.draw_shape1)
         self.button2.clicked.connect(self.draw_shape2)
         self.button3.clicked.connect(self.draw_shape3)
         self.button4.clicked.connect(self.draw_shape4)
 
+        self.logobuttons=QButtonGroup(self)
        
         self.layout.addWidget(self.button1)
         self.layout.addWidget(self.button2)
         self.layout.addWidget(self.button3)
         self.layout.addWidget(self.button4)
-
-        self.setLayout(self.layout)
+        #self.layout.addWidget(self.orqaga)
+       
     
-    
+    def func(self):
+        pass
     def draw_shape1(self):
-        self.clear_layout()
-        grid = QGridLayout()
-        for i in range(3):
-            button = QPushButton("")
-            button.setFixedSize(50, 50)
-            grid.addWidget(button, i, 0)
-        button = QPushButton("")
-        button.setFixedSize(50, 50)
-        grid.addWidget(button, 0, 1)
-        self.layout.addLayout(grid)
+        # self.button1.hide()
+        # self.button2.hide()
+        # self.button3.hide()
+        # self.button4.hide()
+        for button in self.maingroup.buttons():
+            button.hide()
+        self.orqaga.show()
+        self.but11=QPushButton("",self)
+        self.but11.setGeometry(150,100,60,60)
+        self.but11.setStyleSheet("background:blue;border-radius:12px;")
 
-  
+        self.but12=QPushButton("",self)
+        self.but12.setGeometry(220,100,60,60)
+        self.but12.setStyleSheet("background:blue;border-radius:12px;")
+
+        self.but13=QPushButton("",self)
+        self.but13.setGeometry(150,170,60,60)     
+        self.but13.setStyleSheet("background:blue;border-radius:12px;")
+
+        self.but14=QPushButton("",self)
+        self.but14.setGeometry(150,240,60,60) 
+        self.but14.setStyleSheet("background:blue;border-radius:12px;")
+        self.but11.show()
+        self.but12.show()
+        self.but13.show()
+        self.but14.show()
     def draw_shape2(self):
-        self.clear_layout()
-        grid = QGridLayout()
-        for i in range(2):
-            for j in range(2):
-                button = QPushButton("")
-                button.setFixedSize(50, 50)
-                grid.addWidget(button, i, j)
-        self.layout.addLayout(grid)
+        for button in self.maingroup.buttons():
+            button.hide()
+        self.orqaga.show()
+        button1=QPushButton("",self)
+        button1.setGeometry(130,140,60,60)
+        button1.setStyleSheet("background:blue;border-radius:12px;")
+
+        button2=QPushButton("",self)
+        button2.setGeometry(200,140,60,60)
+        button2.setStyleSheet("background:blue;border-radius:12px;")
+
+        button3=QPushButton("",self)
+        button3.setGeometry(130,210,60,60)     
+        button3.setStyleSheet("background:blue;border-radius:12px;")
+
+        button4=QPushButton("",self)
+        button4.setGeometry(200,210,60,60) 
+        button4.setStyleSheet("background:blue;border-radius:12px;")
+        button1.show()
+        button2.show()
+        button3.show()
+        button4.show()
+       
 
    
     def draw_shape3(self):
-        self.clear_layout()
-        grid = QGridLayout()
-        for i in range(4):
-            button = QPushButton("")
-            button.setFixedSize(50, 50)
-            grid.addWidget(button, 0, i)
-        self.layout.addLayout(grid)
+        for button in self.maingroup.buttons():
+            button.hide()
+        self.orqaga.show()
+        button1=QPushButton("",self)
+        button1.setGeometry(80,140,60,60)
+        button1.setStyleSheet("background:blue;border-radius:12px;")
+
+        button2=QPushButton("",self)
+        button2.setGeometry(150,140,60,60)
+        button2.setStyleSheet("background:blue;border-radius:12px;")
+
+        button3=QPushButton("",self)
+        button3.setGeometry(220,140,60,60)     
+        button3.setStyleSheet("background:blue;border-radius:12px;")
+
+        button4=QPushButton("",self)
+        button4.setGeometry(290,140,60,60) 
+        button4.setStyleSheet("background:blue;border-radius:12px;")
+        button1.show()
+        button2.show()
+        button3.show()
+        button4.show()
+       
 
    
     def draw_shape4(self):
-        self.clear_layout()
-        grid = QGridLayout()
-        for i in range(3):
-            button = QPushButton("")
-            button.setFixedSize(50, 50)
-            grid.addWidget(button, i, 0)
-        button = QPushButton("")
-        button.setFixedSize(50, 50)
-        grid.addWidget(button, 2, 1)
-        self.layout.addLayout(grid)
+       
+        for button in self.maingroup.buttons():
+            button.hide()
+        self.orqaga.show()
+        button1=QPushButton("",self)
+        button1.setGeometry(200,140,60,60)
+        button1.setStyleSheet("background:blue;border-radius:12px;")
 
+        button2=QPushButton("",self)
+        button2.setGeometry(200,210,60,60)
+        button2.setStyleSheet("background:blue;border-radius:12px;")
+
+        button3=QPushButton("",self)
+        button3.setGeometry(130,210,60,60)     
+        button3.setStyleSheet("background:blue;border-radius:12px;")
+
+        button4=QPushButton("",self)
+        button4.setGeometry(130,280,60,60) 
+        button4.setStyleSheet("background:blue;border-radius:12px;")
+        button1.show()
+        button2.show()
+        button3.show()
+        button4.show()
    
-    def clear_layout(self):
-        while self.layout.count():
-            child = self.layout.takeAt(0)
-            if child.widget():
-                child.widget().deleteLater()
+          
+   
+   
 
-if __name__ == '__main__':
-    app = QApplication([])
-    window = ShapeWindow()
-    window.show()
-    app.exec_()
+
+app = QApplication([])
+window = ShapeWindow()
+window.show()
+app.exec_()
