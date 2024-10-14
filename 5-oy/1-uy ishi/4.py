@@ -30,7 +30,7 @@ translator = Translator()
 
 def translate_text():
     input_text = line_edit.text()  
-    translated = translator.translate(input_text, src='uz', dest='en')  
+    translated = translator.translate(input_text, src='en', dest='uz')  
     label.setText(translated.text)  
 
 

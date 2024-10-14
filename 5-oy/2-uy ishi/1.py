@@ -64,33 +64,36 @@ class ShapeWindow(QWidget):
         self.but14=QPushButton("",self)
         self.but14.setGeometry(150,240,60,60) 
         self.but14.setStyleSheet("background:blue;border-radius:12px;")
-        self.but11.show()
-        self.but12.show()
-        self.but13.show()
-        self.but14.show()
+
+        self.logobuttons.addButton(self.but11)
+        self.logobuttons.addButton(self.but12)
+        self.logobuttons.addButton(self.but13)
+        self.logobuttons.addButton(self.but14)
+        for button in self.logobuttons.buttons():
+        # self.but11.show()
+        # self.but12.show()
+        # self.but13.show()
+        # self.but14.show()
     def draw_shape2(self):
         for button in self.maingroup.buttons():
             button.hide()
         self.orqaga.show()
-        button1=QPushButton("",self)
-        button1.setGeometry(130,140,60,60)
-        button1.setStyleSheet("background:blue;border-radius:12px;")
+        self.but21=QPushButton("",self)
+        self.but21.setGeometry(130,140,60,60)
+        self.but21.setStyleSheet("background:blue;border-radius:12px;")
 
-        button2=QPushButton("",self)
-        button2.setGeometry(200,140,60,60)
-        button2.setStyleSheet("background:blue;border-radius:12px;")
+        self.but22=QPushButton("",self)
+        self.but22.setGeometry(200,140,60,60)
+        self.but22.setStyleSheet("background:blue;border-radius:12px;")
 
-        button3=QPushButton("",self)
-        button3.setGeometry(130,210,60,60)     
-        button3.setStyleSheet("background:blue;border-radius:12px;")
+        self.but23=QPushButton("",self)
+        self.but23.setGeometry(130,210,60,60)     
+        self.but23.setStyleSheet("background:blue;border-radius:12px;")
 
-        button4=QPushButton("",self)
-        button4.setGeometry(200,210,60,60) 
-        button4.setStyleSheet("background:blue;border-radius:12px;")
-        button1.show()
-        button2.show()
-        button3.show()
-        button4.show()
+        self.but24=QPushButton("",self)
+        self.but24.setGeometry(200,210,60,60) 
+        self.but24.setStyleSheet("background:blue;border-radius:12px;")
+       
        
 
    

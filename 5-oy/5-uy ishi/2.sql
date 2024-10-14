@@ -1,5 +1,5 @@
-/*use dars_data;
-create table xaridor(
+use dars_data;
+create table xaridor1(
 ismi varchar(20),
 familiyasi varchar(20),
 yoshi int,
